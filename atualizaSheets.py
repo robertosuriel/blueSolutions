@@ -10,6 +10,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 os.system("pip install pandas")
 import pandas as pd
 import time
+os.system("pip install requests")
 import requests
 
 
@@ -350,7 +351,8 @@ df_filtrado['vencimento'] = (
     .dt.strftime('%Y-%m-%d')  # Formata para string de data
     .fillna('N/A')  # Substitui NaN por 'N/A'
 )
-
+os.system("pip install gspread")
+os.system("pip install oauth2client")
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
