@@ -1,4 +1,4 @@
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -14,7 +14,7 @@ import requests
 from datetime import datetime, timedelta
 
 # Carregar variáveis do arquivo .env
-load_dotenv()
+# load_dotenv()
 
 # Obter as variáveis de ambiente
 login_user = os.getenv('BLUE_LOGIN_USER')
