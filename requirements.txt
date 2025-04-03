@@ -10,4 +10,5 @@ google-auth-httplib2
 google-auth-oauthlib
 oauth2client
 pdfplumber
+selenium
 # Adicione outras dependências usadas no seu script
