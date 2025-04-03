@@ -138,7 +138,7 @@ def extrair_texto_com_visualizacao(caminho_pdf, bbox, i, ajustar_quebra):
 
 
 # Lista com coordenadas e flag para ajustar a quebra de linha
-area_colunas = [
+area_colunas_tabela1 = [
     ([10, 230, 90, 450], False),  # Itens da Fatura
     ([90, 230, 110, 450], False),  # Unid.
     ([112, 230, 160, 450], False),  # Quant.
@@ -151,7 +151,7 @@ area_colunas = [
     ([420, 230, 452, 450], True)  # Tarifa Unit. (R$)
 ]
 
-
+area_colunas = area_colunas_tabela1
 
 
 caminho_pdf = baixar_pdf_do_drive(pasta_id, nome_arquivo)
@@ -170,9 +170,8 @@ caminho_pdf = baixar_pdf_do_drive(pasta_id, nome_arquivo)
 
 df = []
 
-dados_fatura = {}  # Dicionário para armazenar os dados das colunas
+dados_fatura = {}  
 
-# Processar cada coluna extraída
 for i, (area, ajustar_quebra) in enumerate(area_colunas, start=1):
     coluna_texto = extrair_texto_com_visualizacao(caminho_pdf, area, i, ajustar_quebra)
     
